@@ -1,0 +1,36 @@
+{
+	"name": "Ad_source_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_tpch",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"P_source_file": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Acadamy_of_data"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().P_source_file",
+					"type": "Expression"
+				},
+				"container": "inbound"
+			},
+			"columnDelimiter": "|",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

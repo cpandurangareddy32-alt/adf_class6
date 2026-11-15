@@ -1,0 +1,35 @@
+{
+	"name": "pl1sourceforCopyActivity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_tpch",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"psourcefile": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Gopi"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().psourcefile",
+					"type": "Expression"
+				},
+				"container": "inbound"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

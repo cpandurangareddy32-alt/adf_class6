@@ -1,0 +1,26 @@
+{
+	"name": "p2_getmetadata_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_tpch",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Acadamy_of_data_class5"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "dumy-in-boundcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

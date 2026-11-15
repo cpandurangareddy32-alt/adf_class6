@@ -1,0 +1,15 @@
+{
+	"name": "aodadftraining",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "21138501-f788-4057-b6de-1688fc633273",
+		"tenantId": "76376f66-abed-4cea-b18f-5139502582a3"
+	}
+}

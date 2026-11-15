@@ -1,0 +1,35 @@
+{
+	"name": "p1_parameter_Dummycontainer_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_tpch",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pl_dammysource_f": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Acadamy_of_data_class5"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().pl_dammysource_f",
+					"type": "Expression"
+				},
+				"container": "dumy-in-boundcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

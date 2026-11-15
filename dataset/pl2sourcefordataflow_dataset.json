@@ -1,0 +1,35 @@
+{
+	"name": "pl2sourcefordataflow_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_tpch",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pfile": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Gopi"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().pfile",
+					"type": "Expression"
+				},
+				"container": "dumy-in-boundcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

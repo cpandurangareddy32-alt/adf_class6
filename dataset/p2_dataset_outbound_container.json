@@ -1,0 +1,68 @@
+{
+	"name": "p2_dataset_outbound_container",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstorage_tpch",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"P_outbound_file": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Acadamy_of_data_class5"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "outbound"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "_col0_",
+				"type": "String"
+			},
+			{
+				"name": "_col1_",
+				"type": "String"
+			},
+			{
+				"name": "_col2_",
+				"type": "String"
+			},
+			{
+				"name": "_col3_",
+				"type": "String"
+			},
+			{
+				"name": "_col4_",
+				"type": "String"
+			},
+			{
+				"name": "_col5_",
+				"type": "String"
+			},
+			{
+				"name": "_col6_",
+				"type": "String"
+			},
+			{
+				"name": "_col7_",
+				"type": "String"
+			},
+			{
+				"name": "processed_date",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
