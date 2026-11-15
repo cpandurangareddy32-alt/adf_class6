@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "aodadftraining"
+		},
+		"ls_blobstorage_tpch_connectionString": {
+			"value": ""
+		},
+		"ls_postgresql_tpch_password": {
+			"value": ""
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"ls_postgresql_tpch_properties_typeProperties_server": {
+			"value": "tpch-adf-demo.postgres.database.azure.com"
+		},
+		"ls_postgresql_tpch_properties_typeProperties_database": {
+			"value": "mona"
+		},
+		"ls_postgresql_tpch_properties_typeProperties_username": {
+			"value": "pgadmin"
+		}
+	}
+}
